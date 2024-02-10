@@ -15,18 +15,18 @@ class Solution:
         start = 0
         end = len(nums) - 1
 
-        while (nums[start] < 0):
+        while nums[start] < 0:
 
             # figure out which one is larger, if start ** 2 >= end ** 2
-            # then remove nums[start] by using nums.pop(start) because pop will remove the element and return it's value
+            # then remove nums[start] by using nums.pop(start) because pop will remove the element and return its value
             # and add it to the index end by using nums.insert(end, abs(value))
-            # since we remove one element from left, index 'start' will automatically points to next value
+            # since we remove one element from left, index 'start' will automatically point to next value,
             # so we do not need to update start value for now
             # 
-            # else if start ** 2 < end ** 2, which means right side is larger than left, go to check next element from right
-            # loop ends then start are equals to end
+            # else if start ** 2 < end ** 2, which means right side is larger than left, go to check next element
+            # from right loop ends then start are equals to end
 
-            if (nums[start] ** 2 >= nums[end] ** 2):
+            if nums[start] ** 2 >= nums[end] ** 2:
                 tmp = nums.pop(start)
                 nums.insert(end, abs(tmp))
                 end -= 1
