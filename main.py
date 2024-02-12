@@ -7,6 +7,9 @@
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    nums = [3, 2, 1]
+    for i in range(len(nums) - 1, -1, -1):
+        print(nums[i])
 
 
 # Press the green button in the gutter to run the script.
